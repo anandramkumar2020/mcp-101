@@ -1,0 +1,19 @@
+[project]
+name = "mcp-101"
+version = "0.1.0"
+description = "Educational MCP server demonstrating Model Context Protocol fundamentals"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_101"]
+
+[project.scripts]
+mcp-101 = "mcp_101.server:main"
